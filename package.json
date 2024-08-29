@@ -1,6 +1,6 @@
 {
   "name": "@alex_neo/playwright-nyan-reporter",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1",
   "description": "Nyan reporter for Playwright Test",
   "main": "./dist/index.js",
   "types": "./dist/index.d.js",
