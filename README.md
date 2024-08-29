@@ -28,7 +28,7 @@ To use the Nyan reporter in your Playwright tests, configure it in your `playwri
 
 ```ts
 import type { PlaywrightTestConfig } from '@playwright/test';
-import { NyanReporterOptions } from '@alex_neo/playwright-nyan-reporter';
+import { NyanReporterOptions } from '@alex_neo/playwright-nyan-reporter/dist';
 
 const config: PlaywrightTestConfig = {
   testDir: './tests',
@@ -41,11 +41,13 @@ const config: PlaywrightTestConfig = {
   retries: process.env.CI ? 2 : 0,
   workers: '50%',
   reporter: [
-    '@alex_neo/playwright-nyan-reporter',
-    {
-      suppressErrorReporter: true,
-      renderOnRunCompletely: false,
-    } as NyanReporterOptions,
+    [
+      '@alex_neo/playwright-nyan-reporter',
+      {
+        suppressErrorReporter: true,
+        renderOnRunCompletely: false,
+      } as NyanReporterOptions,
+    ],
   ],
   use: {
     actionTimeout: 0,
